@@ -1,0 +1,155 @@
+In DevOps, security is integrated throughout the software delivery lifecycle — this is known as DevSecOps. The goal is to build security into every stage of the CI/CD pipeline rather than applying it as a final step.
+🔐 Security Tools & Methods in DevOps (DevSecOps)
+🔹 1. Static Application Security Testing (SAST)
+
+What it does:
+Scans source code or binaries before execution to find vulnerabilities (e.g., SQL injection, buffer overflow).
+
+Tools:
+
+    ✅ SonarQube
+
+    ✅ Checkmarx
+
+    ✅ Fortify
+
+    ✅ CodeQL (GitHub)
+
+Use in pipeline: Run in the build phase of CI/CD.
+🔹 2. Dynamic Application Security Testing (DAST)
+
+What it does:
+Scans running applications to identify security flaws by simulating attacks.
+
+Tools:
+
+    ✅ OWASP ZAP
+
+    ✅ Burp Suite
+
+    ✅ Arachni
+
+Use in pipeline: Run in staging or test environments.
+🔹 3. Software Composition Analysis (SCA)
+
+What it does:
+Detects vulnerabilities in third-party libraries and open-source dependencies.
+
+Tools:
+
+    ✅ Snyk
+
+    ✅ WhiteSource
+
+    ✅ Black Duck
+
+    ✅ Dependabot
+
+Use in pipeline: During code build or PR phase.
+🔹 4. Container Security
+
+What it does:
+Scans Docker images for known vulnerabilities, misconfigurations, and secrets.
+
+Tools:
+
+    ✅ Trivy (by Aqua)
+
+    ✅ Clair
+
+    ✅ Anchore
+
+    ✅ Docker Scout
+
+    ✅ Sysdig Secure
+
+Use in pipeline: Before pushing images to registry (e.g., JFrog, ECR).
+🔹 5. Infrastructure as Code (IaC) Security
+
+What it does:
+Analyzes Terraform, CloudFormation, or Ansible code for misconfigurations and compliance issues.
+
+Tools:
+
+    ✅ Checkov
+
+    ✅ TFSec
+
+    ✅ Kics (by Checkmarx)
+
+    ✅ Open Policy Agent (OPA)
+
+    ✅ Terrascan
+
+Use in pipeline: Pre-deployment or during PR review.
+🔹 6. Secret Detection
+
+What it does:
+Finds hardcoded passwords, API keys, or credentials in source code.
+
+Tools:
+
+    ✅ GitLeaks
+
+    ✅ TruffleHog
+
+    ✅ Detect Secrets (Yelp)
+
+Use in pipeline: During code commit or PR validation.
+🔹 7. Runtime Security & Monitoring
+
+What it does:
+Detects anomalies, threats, and breaches during application runtime.
+
+Tools:
+
+    ✅ Falco (runtime threat detection for containers)
+
+    ✅ AppArmor / SELinux (Linux hardening)
+
+    ✅ Sysdig Secure
+
+    ✅ Datadog Security Monitoring
+
+🔹 8. Security as Code (Policy as Code)
+
+What it does:
+Defines and enforces security policies automatically using code.
+
+Tools:
+
+    ✅ OPA (Open Policy Agent)
+
+    ✅ Kyverno (Kubernetes policy engine)
+
+    ✅ Rego (OPA’s language)
+
+🔹 9. Access Control and Secrets Management
+
+What it does:
+Manages secrets, tokens, and passwords securely.
+
+Tools:
+
+    ✅ HashiCorp Vault
+
+    ✅ AWS Secrets Manager
+
+    ✅ Kubernetes Secrets (use with caution)
+
+    ✅ Sealed Secrets (Bitnami)
+
+🔹 10. Compliance and Auditing
+
+What it does:
+Ensures adherence to security standards like CIS Benchmarks, PCI-DSS, GDPR, HIPAA, etc.
+
+Tools:
+
+    ✅ Auditd
+
+    ✅ OpenSCAP
+
+    ✅ Chef InSpec
+
+    ✅ Cloud Custodian
